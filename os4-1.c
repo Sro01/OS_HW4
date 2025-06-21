@@ -41,7 +41,7 @@ typedef struct {
 typedef struct {
     Superblock superblock;          // 256B
     Inode inodes[MAX_FILES];        // 32B * 16 = 512B
-    DataBlock blocks[MAX_BLOCKS];   // 16B * 208 = 3328B
+    DataBlock blocks[MAX_BLOCKS];    // 16B * 208 = 3328B
 } FileSystem;                       // 총 4096B
 
 /*
@@ -63,8 +63,8 @@ int calculate_indirect_blocks(int size) {
 
     int ret = (size - 48) / 16;
 
-    if (ret % 16 > 0) {
-        return ++ret;
+    if ((size - 48) % 16 > 0) { 
+        return ++(ret);
     } else {
         return ret;
     }
@@ -90,7 +90,6 @@ void print_file_info() {
     for (int i = 0; i < used_inodes_num; i++) {
         Inode inode = fs.inodes[i];
 
-
         printf("\tFile: %s\n", inode.file_name);
         printf("\t\tSize: %u\n", inode.size);
         printf("\t\tInode: %d\n", i);
@@ -101,6 +100,7 @@ void print_file_info() {
                 none_blocks++;
             }
         }
+
         for (int j = 0; j < MAX_FILE_BLOCKS; j++) {
             if (j == MAX_FILE_BLOCKS - none_blocks - 1) {
                 printf("%u\n", inode.blocks[j]);
@@ -110,7 +110,6 @@ void print_file_info() {
                 printf("%u, ", inode.blocks[j]);
             }
         }
-        // printf("\t\tDirect blocks: %u, %u, %u\n", inode.blocks[0], inode.blocks[1], inode.blocks[2]); // 없는 경우 none
         
         int indirect_blocks_num = calculate_indirect_blocks(inode.size);
 
@@ -118,13 +117,38 @@ void print_file_info() {
         if (indirect_blocks_num > 0) {
             printf("\t\tIndirect block: %u\n", inode.indirect_blocks);
             printf("\t\tIndirect data blocks: ");
-    
-            for (int i = 1; i <= indirect_blocks_num; i++) {
-                if (i == indirect_blocks_num) {
-                    printf("%u\n", inode.indirect_blocks + i);
+            
+            int data_idx = inode.indirect_blocks;
+            
+            unsigned char *indirect_data = (unsigned char *)fs.blocks[data_idx].data;
+
+            for (int j = 0; j < indirect_blocks_num; j++) {
+                if (j == indirect_blocks_num - 1) {
+                    printf("%u\n", indirect_data[j]);
                 }
                 else {
-                    printf("%u, ", inode.indirect_blocks + i);
+                    printf("%u, ", indirect_data[j]);
+                }
+            }
+        }
+    }
+}
+
+void print_datablock_info() {
+    for (int i = 0; i < MAX_BLOCKS; i++) {
+        DataBlock db = fs.blocks[i];
+
+        for (int j = 0; j < MAX_FILES; j++) {
+            if (db.data[j]) {
+                if (db.data[j] == NONE_BLOCK) {
+                    // printf("NONE!\n");
+                    continue;
+                }
+
+                printf("%c", db.data[j]);
+
+                if (j == MAX_FILES - 1) {
+                    printf("\n");
                 }
             }
         }
@@ -138,21 +162,26 @@ void read_binary() {
     if (fread(&(fs.superblock), sizeof(fs.superblock), 1, fp)) {
         print_superblock_info();
     } else {
-        printf("ERROR!\n");
+        // printf("ERROR!\n");
         exit(1);
     }
 
     /* 2. Inode Table - 16 * 32B */
     for (int i = 0; i < MAX_FILES; i++) {
         if (!fread(&(fs.inodes[i]), sizeof(fs.inodes[i]), 1, fp)) {
-            printf("ERROR!\n");
+            // printf("ERROR!\n");
+            exit(1);
+        }
+    }
+    
+    /* 3. DataBlock - 208 * 16B */
+    for (int i = 0; i < MAX_BLOCKS; i++) {
+        if (!fread(&(fs.blocks[i]), sizeof(fs.blocks[i]), 1, fp)) {
+            // printf("ERROR!\n");
             exit(1);
         }
     }
     print_file_info();
-    
-    /* 3. DataBlock - 208 * 16B */
-
 }
 
 int main() {
