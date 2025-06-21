@@ -1,0 +1,171 @@
+CMD : READ file_a3
+Inode [02]: file_a3 (file size : 100 B)
+Block [16] Direct: "I'm not going t
+Block [17] Direct: o take your inso
+Block [18] Direct: lence sitting do
+Block [19] Indirect Table: 20, 21, 22, 23
+Block [20] Indirect: wn!" "Your hemor
+Block [21] Indirect: rhoids are flari
+Block [22] Indirect: ng up again eh?"
+Block [23] Indirect:  - 3
+File Contents: "I'm not going to take your insolence sitting down!" "Your hemorrhoids are flaring up again eh?" - 3
+
+CMD : READ file_b1
+Inode [01]: file_b1 (file size : 98 B)
+Block [08] Direct: "I once owned a 
+Block [09] Direct: dog that was sma
+Block [10] Direct: rter than you." 
+Block [11] Indirect Table: 12, 13, 14, 15
+Block [12] Indirect: "He must have ta
+Block [13] Indirect: ught you everyth
+Block [14] Indirect: ing you know." -
+Block [15] Indirect:  1
+File Contents: "I once owned a dog that was smarter than you." "He must have taught you everything you know." - 1
+
+CMD : READ file_b2
+Inode [03]: file_b2 (file size : 118 B)
+Block [24] Direct: "Have you stoppe
+Block [25] Direct: d wearing diaper
+Block [26] Direct: s yet?" "Why? Di
+Block [27] Indirect Table: 28, 29, 30, 31, 60
+Block [28] Indirect: d you want to bo
+Block [29] Indirect: rrow one?" This 
+Block [30] Indirect: content is updat
+Block [31] Indirect: ed to use more b
+Block [60] Indirect: locks.
+File Contents: "Have you stopped wearing diapers yet?" "Why? Did you want to borrow one?" This content is updated to use more blocks.
+
+CMD : READ file_b3
+Inode [05]: file_b3 (file size : 98 B)
+Block [40] Direct: "I once owned a 
+Block [41] Direct: dog that was sma
+Block [42] Direct: rter than you." 
+Block [43] Indirect Table: 44, 45, 46, 47
+Block [44] Indirect: "He must have ta
+Block [45] Indirect: ught you everyth
+Block [46] Indirect: ing you know." -
+Block [47] Indirect:  3
+File Contents: "I once owned a dog that was smarter than you." "He must have taught you everything you know." - 3
+
+CMD : READ file_c1
+Inode [00]: file_c1 (file size : 82 B)
+Block [00] Direct: "Nobody's ever d
+Block [01] Direct: rawn blood from 
+Block [02] Direct: me and nobody ev
+Block [03] Indirect Table: 4, 5, 6
+Block [04] Indirect: er will." "You r
+Block [05] Indirect: un THAT fast?" -
+Block [06] Indirect:  1
+File Contents: "Nobody's ever drawn blood from me and nobody ever will." "You run THAT fast?" - 1
+
+CMD : READ file_c2
+Inode [04]: file_c2 (file size : 82 B)
+Block [07] Direct: "Nobody's ever d
+Block [32] Direct: rawn blood from 
+Block [33] Direct: me and nobody ev
+Block [34] Indirect Table: 35, 36, 37
+Block [35] Indirect: er will." "You r
+Block [36] Indirect: un THAT fast?" -
+Block [37] Indirect:  2
+File Contents: "Nobody's ever drawn blood from me and nobody ever will." "You run THAT fast?" - 2
+
+CMD : READ file_c3
+Inode [06]: file_c3 (file size : 139 B)
+Block [38] Direct: "There are no wo
+Block [39] Direct: rds for how disg
+Block [48] Direct: usting you are."
+Block [49] Indirect Table: 50, 51, 52, 61, 62, 63
+Block [50] Indirect:  "Yes, there are
+Block [51] Indirect: . You just never
+Block [52] Indirect:  learned them." 
+Block [61] Indirect: This content is 
+Block [62] Indirect: also updated wit
+Block [63] Indirect: h new text.
+File Contents: "There are no words for how disgusting you are." "Yes, there are. You just never learned them." This content is also updated with new text.
+
+CMD : READ file_c4
+Inode [07]: file_c4 (file size : 82 B)
+Block [53] Direct: "Nobody's ever d
+Block [54] Direct: rawn blood from 
+Block [55] Direct: me and nobody ev
+Block [56] Indirect Table: 57, 58, 59
+Block [57] Indirect: er will." "You r
+Block [58] Indirect: un THAT fast?" -
+Block [59] Indirect:  4
+File Contents: "Nobody's ever drawn blood from me and nobody ever will." "You run THAT fast?" - 4
+
+CMD : READ final_fragmented_file
+Inode [08]: final_fragmented_file (file size : 134 B)
+Block [64] Direct: "You make me wan
+Block [65] Direct: t to puke." "You
+Block [66] Direct:  make me think s
+Block [67] Indirect Table: 68, 69, 70, 71, 72, 73
+Block [68] Indirect: omebody already 
+Block [69] Indirect: did." This file 
+Block [70] Indirect: should use non-c
+Block [71] Indirect: ontiguous blocks
+Block [72] Indirect:  due to fragment
+Block [73] Indirect: ation.
+File Contents: "You make me want to puke." "You make me think somebody already did." This file should use non-contiguous blocks due to fragmentation.
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 7/16
+   Available Blocks: 134/208
+Detailed File Information:
+  File: file_c1
+    Size: 82
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5, 6
+  File: file_b1
+    Size: 98
+    Inode: 1
+    Direct blocks: 8, 9, 10
+    Indirect block: 11
+    Indirect data blocks: 12, 13, 14, 15
+  File: file_a3
+    Size: 100
+    Inode: 2
+    Direct blocks: 16, 17, 18
+    Indirect block: 19
+    Indirect data blocks: 20, 21, 22, 23
+  File: file_b2
+    Size: 118
+    Inode: 3
+    Direct blocks: 24, 25, 26
+    Indirect block: 27
+    Indirect data blocks: 28, 29, 30, 31, 60
+  File: file_c2
+    Size: 82
+    Inode: 4
+    Direct blocks: 7, 32, 33
+    Indirect block: 34
+    Indirect data blocks: 35, 36, 37
+  File: file_b3
+    Size: 98
+    Inode: 5
+    Direct blocks: 40, 41, 42
+    Indirect block: 43
+    Indirect data blocks: 44, 45, 46, 47
+  File: file_c3
+    Size: 139
+    Inode: 6
+    Direct blocks: 38, 39, 48
+    Indirect block: 49
+    Indirect data blocks: 50, 51, 52, 61, 62, 63
+  File: file_c4
+    Size: 82
+    Inode: 7
+    Direct blocks: 53, 54, 55
+    Indirect block: 56
+    Indirect data blocks: 57, 58, 59
+  File: final_fragmented_file
+    Size: 134
+    Inode: 8
+    Direct blocks: 64, 65, 66
+    Indirect block: 67
+    Indirect data blocks: 68, 69, 70, 71, 72, 73

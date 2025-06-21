@@ -1,0 +1,64 @@
+CMD : READ direct_blocks_only
+Inode [00]: direct_blocks_only (file size : 73 B)
+Block [00] Direct: "You fight like 
+Block [01] Direct: a dairy Farmer!"
+Block [02] Direct:  "How appropriat
+Block [03] Indirect Table: 4, 5
+Block [04] Indirect: e. You fight lik
+Block [05] Indirect: e a cow!"
+File Contents: "You fight like a dairy Farmer!" "How appropriate. You fight like a cow!"
+
+CMD : READ direct_blocks_full
+Inode [01]: direct_blocks_full (file size : 143 B)
+Block [06] Direct: DDDDDDDDDDDDDDDD
+Block [07] Direct: DDDDDDDDDDDDDDDD
+Block [08] Direct: DDDDDDDD"This is
+Block [09] Indirect Table: 10, 11, 12, 13, 14, 15
+Block [10] Indirect:  the END for you
+Block [11] Indirect: , you gutter cra
+Block [12] Indirect: wling cur!" "And
+Block [13] Indirect:  I've got a litt
+Block [14] Indirect: le TIP for you, 
+Block [15] Indirect: get the POINT?"
+File Contents: DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"This is the END for you, you gutter crawling cur!" "And I've got a little TIP for you, get the POINT?"
+
+CMD : READ with_indirect_blocks
+Inode [02]: with_indirect_blocks (file size : 158 B)
+Block [16] Direct: IIIIIIIIIIIIIIII
+Block [17] Direct: IIIIIIIIIIIIIIII
+Block [18] Direct: IIIIIIIIIIIIIIII
+Block [19] Indirect Table: 20, 21, 22, 23, 24, 25, 26
+Block [20] Indirect: IIIIIIIIIIII"I'v
+Block [21] Indirect: e spoken with ap
+Block [22] Indirect: es more polite t
+Block [23] Indirect: han you!" "I'm g
+Block [24] Indirect: lad to hear you 
+Block [25] Indirect: attended your fa
+Block [26] Indirect: mily reunion!"
+File Contents: IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"I've spoken with apes more polite than you!" "I'm glad to hear you attended your family reunion!"
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 13/16
+   Available Blocks: 181/208
+Detailed File Information:
+  File: direct_blocks_only
+    Size: 73
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5
+  File: direct_blocks_full
+    Size: 143
+    Inode: 1
+    Direct blocks: 6, 7, 8
+    Indirect block: 9
+    Indirect data blocks: 10, 11, 12, 13, 14, 15
+  File: with_indirect_blocks
+    Size: 158
+    Inode: 2
+    Direct blocks: 16, 17, 18
+    Indirect block: 19
+    Indirect data blocks: 20, 21, 22, 23, 24, 25, 26

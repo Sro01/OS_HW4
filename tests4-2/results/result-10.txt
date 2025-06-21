@@ -1,0 +1,325 @@
+CMD : READ full_file_1
+Inode [00]: full_file_1 (file size : 303 B)
+Block [00] Direct: ABCDEFGHIJKLMNOP
+Block [01] Direct: QRSTUVWXYZabcdef
+Block [02] Direct: ghijklmnopqrstuv
+Block [03] Indirect Table: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+Block [04] Indirect: wxyz0123456789AB
+Block [05] Indirect: CDEFGHIJKLMNOPQR
+Block [06] Indirect: Green Pirate: "Y
+Block [07] Indirect: ou must master t
+Block [08] Indirect: he sword, the ar
+Block [09] Indirect: t of thievery, a
+Block [10] Indirect: nd the quest tre
+Block [11] Indirect: asure hunting; t
+Block [12] Indirect: hen return with 
+Block [13] Indirect: proof that you'v
+Block [14] Indirect: e done it." Blue
+Block [15] Indirect:  Pirate & All Pi
+Block [16] Indirect: rates: "And then
+Block [17] Indirect:  ye must drink g
+Block [18] Indirect: rog with us!! GR
+Block [19] Indirect: OG!!!" - File 1
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 1
+
+CMD : READ full_file_2
+Inode [01]: full_file_2 (file size : 303 B)
+Block [20] Direct: ABCDEFGHIJKLMNOP
+Block [21] Direct: QRSTUVWXYZabcdef
+Block [22] Direct: ghijklmnopqrstuv
+Block [23] Indirect Table: 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39
+Block [24] Indirect: wxyz0123456789AB
+Block [25] Indirect: CDEFGHIJKLMNOPQR
+Block [26] Indirect: Green Pirate: "Y
+Block [27] Indirect: ou must master t
+Block [28] Indirect: he sword, the ar
+Block [29] Indirect: t of thievery, a
+Block [30] Indirect: nd the quest tre
+Block [31] Indirect: asure hunting; t
+Block [32] Indirect: hen return with 
+Block [33] Indirect: proof that you'v
+Block [34] Indirect: e done it." Blue
+Block [35] Indirect:  Pirate & All Pi
+Block [36] Indirect: rates: "And then
+Block [37] Indirect:  ye must drink g
+Block [38] Indirect: rog with us!! GR
+Block [39] Indirect: OG!!!" - File 2
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 2
+
+CMD : READ full_file_3
+Inode [02]: full_file_3 (file size : 303 B)
+Block [40] Direct: ABCDEFGHIJKLMNOP
+Block [41] Direct: QRSTUVWXYZabcdef
+Block [42] Direct: ghijklmnopqrstuv
+Block [43] Indirect Table: 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
+Block [44] Indirect: wxyz0123456789AB
+Block [45] Indirect: CDEFGHIJKLMNOPQR
+Block [46] Indirect: Green Pirate: "Y
+Block [47] Indirect: ou must master t
+Block [48] Indirect: he sword, the ar
+Block [49] Indirect: t of thievery, a
+Block [50] Indirect: nd the quest tre
+Block [51] Indirect: asure hunting; t
+Block [52] Indirect: hen return with 
+Block [53] Indirect: proof that you'v
+Block [54] Indirect: e done it." Blue
+Block [55] Indirect:  Pirate & All Pi
+Block [56] Indirect: rates: "And then
+Block [57] Indirect:  ye must drink g
+Block [58] Indirect: rog with us!! GR
+Block [59] Indirect: OG!!!" - File 3
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 3
+
+CMD : READ full_file_4
+Inode [03]: full_file_4 (file size : 303 B)
+Block [60] Direct: ABCDEFGHIJKLMNOP
+Block [61] Direct: QRSTUVWXYZabcdef
+Block [62] Direct: ghijklmnopqrstuv
+Block [63] Indirect Table: 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79
+Block [64] Indirect: wxyz0123456789AB
+Block [65] Indirect: CDEFGHIJKLMNOPQR
+Block [66] Indirect: Green Pirate: "Y
+Block [67] Indirect: ou must master t
+Block [68] Indirect: he sword, the ar
+Block [69] Indirect: t of thievery, a
+Block [70] Indirect: nd the quest tre
+Block [71] Indirect: asure hunting; t
+Block [72] Indirect: hen return with 
+Block [73] Indirect: proof that you'v
+Block [74] Indirect: e done it." Blue
+Block [75] Indirect:  Pirate & All Pi
+Block [76] Indirect: rates: "And then
+Block [77] Indirect:  ye must drink g
+Block [78] Indirect: rog with us!! GR
+Block [79] Indirect: OG!!!" - File 4
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 4
+
+CMD : READ full_file_5
+Inode [04]: full_file_5 (file size : 303 B)
+Block [80] Direct: ABCDEFGHIJKLMNOP
+Block [81] Direct: QRSTUVWXYZabcdef
+Block [82] Direct: ghijklmnopqrstuv
+Block [83] Indirect Table: 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
+Block [84] Indirect: wxyz0123456789AB
+Block [85] Indirect: CDEFGHIJKLMNOPQR
+Block [86] Indirect: Green Pirate: "Y
+Block [87] Indirect: ou must master t
+Block [88] Indirect: he sword, the ar
+Block [89] Indirect: t of thievery, a
+Block [90] Indirect: nd the quest tre
+Block [91] Indirect: asure hunting; t
+Block [92] Indirect: hen return with 
+Block [93] Indirect: proof that you'v
+Block [94] Indirect: e done it." Blue
+Block [95] Indirect:  Pirate & All Pi
+Block [96] Indirect: rates: "And then
+Block [97] Indirect:  ye must drink g
+Block [98] Indirect: rog with us!! GR
+Block [99] Indirect: OG!!!" - File 5
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 5
+
+CMD : READ full_file_6
+Inode [05]: full_file_6 (file size : 303 B)
+Block [100] Direct: ABCDEFGHIJKLMNOP
+Block [101] Direct: QRSTUVWXYZabcdef
+Block [102] Direct: ghijklmnopqrstuv
+Block [103] Indirect Table: 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119
+Block [104] Indirect: wxyz0123456789AB
+Block [105] Indirect: CDEFGHIJKLMNOPQR
+Block [106] Indirect: Green Pirate: "Y
+Block [107] Indirect: ou must master t
+Block [108] Indirect: he sword, the ar
+Block [109] Indirect: t of thievery, a
+Block [110] Indirect: nd the quest tre
+Block [111] Indirect: asure hunting; t
+Block [112] Indirect: hen return with 
+Block [113] Indirect: proof that you'v
+Block [114] Indirect: e done it." Blue
+Block [115] Indirect:  Pirate & All Pi
+Block [116] Indirect: rates: "And then
+Block [117] Indirect:  ye must drink g
+Block [118] Indirect: rog with us!! GR
+Block [119] Indirect: OG!!!" - File 6
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 6
+
+CMD : READ full_file_7
+Inode [06]: full_file_7 (file size : 303 B)
+Block [120] Direct: ABCDEFGHIJKLMNOP
+Block [121] Direct: QRSTUVWXYZabcdef
+Block [122] Direct: ghijklmnopqrstuv
+Block [123] Indirect Table: 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139
+Block [124] Indirect: wxyz0123456789AB
+Block [125] Indirect: CDEFGHIJKLMNOPQR
+Block [126] Indirect: Green Pirate: "Y
+Block [127] Indirect: ou must master t
+Block [128] Indirect: he sword, the ar
+Block [129] Indirect: t of thievery, a
+Block [130] Indirect: nd the quest tre
+Block [131] Indirect: asure hunting; t
+Block [132] Indirect: hen return with 
+Block [133] Indirect: proof that you'v
+Block [134] Indirect: e done it." Blue
+Block [135] Indirect:  Pirate & All Pi
+Block [136] Indirect: rates: "And then
+Block [137] Indirect:  ye must drink g
+Block [138] Indirect: rog with us!! GR
+Block [139] Indirect: OG!!!" - File 7
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 7
+
+CMD : READ full_file_8
+Inode [07]: full_file_8 (file size : 303 B)
+Block [140] Direct: ABCDEFGHIJKLMNOP
+Block [141] Direct: QRSTUVWXYZabcdef
+Block [142] Direct: ghijklmnopqrstuv
+Block [143] Indirect Table: 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159
+Block [144] Indirect: wxyz0123456789AB
+Block [145] Indirect: CDEFGHIJKLMNOPQR
+Block [146] Indirect: Green Pirate: "Y
+Block [147] Indirect: ou must master t
+Block [148] Indirect: he sword, the ar
+Block [149] Indirect: t of thievery, a
+Block [150] Indirect: nd the quest tre
+Block [151] Indirect: asure hunting; t
+Block [152] Indirect: hen return with 
+Block [153] Indirect: proof that you'v
+Block [154] Indirect: e done it." Blue
+Block [155] Indirect:  Pirate & All Pi
+Block [156] Indirect: rates: "And then
+Block [157] Indirect:  ye must drink g
+Block [158] Indirect: rog with us!! GR
+Block [159] Indirect: OG!!!" - File 8
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 8
+
+CMD : READ full_file_9
+Inode [08]: full_file_9 (file size : 303 B)
+Block [160] Direct: ABCDEFGHIJKLMNOP
+Block [161] Direct: QRSTUVWXYZabcdef
+Block [162] Direct: ghijklmnopqrstuv
+Block [163] Indirect Table: 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
+Block [164] Indirect: wxyz0123456789AB
+Block [165] Indirect: CDEFGHIJKLMNOPQR
+Block [166] Indirect: Green Pirate: "Y
+Block [167] Indirect: ou must master t
+Block [168] Indirect: he sword, the ar
+Block [169] Indirect: t of thievery, a
+Block [170] Indirect: nd the quest tre
+Block [171] Indirect: asure hunting; t
+Block [172] Indirect: hen return with 
+Block [173] Indirect: proof that you'v
+Block [174] Indirect: e done it." Blue
+Block [175] Indirect:  Pirate & All Pi
+Block [176] Indirect: rates: "And then
+Block [177] Indirect:  ye must drink g
+Block [178] Indirect: rog with us!! GR
+Block [179] Indirect: OG!!!" - File 9
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 9
+
+CMD : READ full_file_10
+Inode [09]: full_file_10 (file size : 303 B)
+Block [180] Direct: ABCDEFGHIJKLMNOP
+Block [181] Direct: QRSTUVWXYZabcdef
+Block [182] Direct: ghijklmnopqrstuv
+Block [183] Indirect Table: 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199
+Block [184] Indirect: wxyz0123456789AB
+Block [185] Indirect: CDEFGHIJKLMNOPQG
+Block [186] Indirect: reen Pirate: "Yo
+Block [187] Indirect: u must master th
+Block [188] Indirect: e sword, the art
+Block [189] Indirect:  of thievery, an
+Block [190] Indirect: d the quest trea
+Block [191] Indirect: sure hunting; th
+Block [192] Indirect: en return with p
+Block [193] Indirect: roof that you've
+Block [194] Indirect:  done it." Blue 
+Block [195] Indirect: Pirate & All Pir
+Block [196] Indirect: ates: "And then 
+Block [197] Indirect: ye must drink gr
+Block [198] Indirect: og with us!! GRO
+Block [199] Indirect: G!!!" - File 10
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQGreen Pirate: "You must master the sword, the art of thievery, and the quest treasure hunting; then return with proof that you've done it." Blue Pirate & All Pirates: "And then ye must drink grog with us!! GROG!!!" - File 10
+
+CMD : READ last_file
+Inode [10]: last_file (file size : 112 B)
+Block [200] Direct: ABCDEFGHIJKLMNOP
+Block [201] Direct: QRSTUVWXYZabcdef
+Block [202] Direct: ghijklmnopqrstuv
+Block [203] Indirect Table: 204, 205, 206, 207
+Block [204] Indirect: wxyz012345678"My
+Block [205] Indirect:  handkerchief wi
+Block [206] Indirect: ll wipe up your 
+Block [207] Indirect: blood!" "So you 
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678"My handkerchief will wipe up your blood!" "So you 
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 5/16
+   Available Blocks: 0/208
+Detailed File Information:
+  File: full_file_1
+    Size: 303
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+  File: full_file_2
+    Size: 303
+    Inode: 1
+    Direct blocks: 20, 21, 22
+    Indirect block: 23
+    Indirect data blocks: 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39
+  File: full_file_3
+    Size: 303
+    Inode: 2
+    Direct blocks: 40, 41, 42
+    Indirect block: 43
+    Indirect data blocks: 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
+  File: full_file_4
+    Size: 303
+    Inode: 3
+    Direct blocks: 60, 61, 62
+    Indirect block: 63
+    Indirect data blocks: 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79
+  File: full_file_5
+    Size: 303
+    Inode: 4
+    Direct blocks: 80, 81, 82
+    Indirect block: 83
+    Indirect data blocks: 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
+  File: full_file_6
+    Size: 303
+    Inode: 5
+    Direct blocks: 100, 101, 102
+    Indirect block: 103
+    Indirect data blocks: 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119
+  File: full_file_7
+    Size: 303
+    Inode: 6
+    Direct blocks: 120, 121, 122
+    Indirect block: 123
+    Indirect data blocks: 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139
+  File: full_file_8
+    Size: 303
+    Inode: 7
+    Direct blocks: 140, 141, 142
+    Indirect block: 143
+    Indirect data blocks: 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159
+  File: full_file_9
+    Size: 303
+    Inode: 8
+    Direct blocks: 160, 161, 162
+    Indirect block: 163
+    Indirect data blocks: 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
+  File: full_file_10
+    Size: 303
+    Inode: 9
+    Direct blocks: 180, 181, 182
+    Indirect block: 183
+    Indirect data blocks: 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199
+  File: last_file
+    Size: 112
+    Inode: 10
+    Direct blocks: 200, 201, 202
+    Indirect block: 203
+    Indirect data blocks: 204, 205, 206, 207

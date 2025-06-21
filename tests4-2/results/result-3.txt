@@ -1,0 +1,27 @@
+CMD : READ large_file
+Inode [00]: large_file (file size : 129 B)
+Block [00] Direct: I'm dishonest, a
+Block [01] Direct: nd a dishonest m
+Block [02] Direct: an you can alway
+Block [03] Indirect Table: 4, 5, 6, 7, 8, 9
+Block [04] Indirect: s trust to be di
+Block [05] Indirect: shonest. Honestl
+Block [06] Indirect: y. Why is the ru
+Block [07] Indirect: m always gone? D
+Block [08] Indirect: o you fear death
+Block [09] Indirect: ?
+File Contents: I'm dishonest, and a dishonest man you can always trust to be dishonest. Honestly. Why is the rum always gone? Do you fear death?
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 15/16
+   Available Blocks: 198/208
+Detailed File Information:
+  File: large_file
+    Size: 129
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5, 6, 7, 8, 9

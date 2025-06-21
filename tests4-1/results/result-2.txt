@@ -1,0 +1,29 @@
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 12/16
+   Available Blocks: 170/208
+Detailed File Information:
+  File: test_file_1
+    Size: 42
+    Inode: 0
+    Direct blocks: 0, 1, 2
+  File: test_file_2
+    Size: 91
+    Inode: 1
+    Direct blocks: 3, 4, 5
+    Indirect block: 6
+    Indirect data blocks: 7, 8, 9
+  File: to_student_osta_message
+    Size: 269
+    Inode: 2
+    Direct blocks: 10, 11, 12
+    Indirect block: 13
+    Indirect data blocks: 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+  File: bakery_info
+    Size: 139
+    Inode: 3
+    Direct blocks: 28, 29, 30
+    Indirect block: 31
+    Indirect data blocks: 32, 33, 34, 35, 36, 37

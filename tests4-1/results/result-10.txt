@@ -1,0 +1,73 @@
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 5/16
+   Available Blocks: 0/208
+Detailed File Information:
+  File: full_file_1
+    Size: 303
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+  File: full_file_2
+    Size: 303
+    Inode: 1
+    Direct blocks: 20, 21, 22
+    Indirect block: 23
+    Indirect data blocks: 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39
+  File: full_file_3
+    Size: 303
+    Inode: 2
+    Direct blocks: 40, 41, 42
+    Indirect block: 43
+    Indirect data blocks: 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
+  File: full_file_4
+    Size: 303
+    Inode: 3
+    Direct blocks: 60, 61, 62
+    Indirect block: 63
+    Indirect data blocks: 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79
+  File: full_file_5
+    Size: 303
+    Inode: 4
+    Direct blocks: 80, 81, 82
+    Indirect block: 83
+    Indirect data blocks: 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
+  File: full_file_6
+    Size: 303
+    Inode: 5
+    Direct blocks: 100, 101, 102
+    Indirect block: 103
+    Indirect data blocks: 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119
+  File: full_file_7
+    Size: 303
+    Inode: 6
+    Direct blocks: 120, 121, 122
+    Indirect block: 123
+    Indirect data blocks: 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139
+  File: full_file_8
+    Size: 303
+    Inode: 7
+    Direct blocks: 140, 141, 142
+    Indirect block: 143
+    Indirect data blocks: 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159
+  File: full_file_9
+    Size: 303
+    Inode: 8
+    Direct blocks: 160, 161, 162
+    Indirect block: 163
+    Indirect data blocks: 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
+  File: full_file_10
+    Size: 303
+    Inode: 9
+    Direct blocks: 180, 181, 182
+    Indirect block: 183
+    Indirect data blocks: 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199
+  File: last_file
+    Size: 112
+    Inode: 10
+    Direct blocks: 200, 201, 202
+    Indirect block: 203
+    Indirect data blocks: 204, 205, 206, 207

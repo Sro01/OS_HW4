@@ -1,0 +1,61 @@
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 7/16
+   Available Blocks: 134/208
+Detailed File Information:
+  File: file_c1
+    Size: 82
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5, 6
+  File: file_b1
+    Size: 98
+    Inode: 1
+    Direct blocks: 8, 9, 10
+    Indirect block: 11
+    Indirect data blocks: 12, 13, 14, 15
+  File: file_a3
+    Size: 100
+    Inode: 2
+    Direct blocks: 16, 17, 18
+    Indirect block: 19
+    Indirect data blocks: 20, 21, 22, 23
+  File: file_b2
+    Size: 118
+    Inode: 3
+    Direct blocks: 24, 25, 26
+    Indirect block: 27
+    Indirect data blocks: 28, 29, 30, 31, 60
+  File: file_c2
+    Size: 82
+    Inode: 4
+    Direct blocks: 7, 32, 33
+    Indirect block: 34
+    Indirect data blocks: 35, 36, 37
+  File: file_b3
+    Size: 98
+    Inode: 5
+    Direct blocks: 40, 41, 42
+    Indirect block: 43
+    Indirect data blocks: 44, 45, 46, 47
+  File: file_c3
+    Size: 139
+    Inode: 6
+    Direct blocks: 38, 39, 48
+    Indirect block: 49
+    Indirect data blocks: 50, 51, 52, 61, 62, 63
+  File: file_c4
+    Size: 82
+    Inode: 7
+    Direct blocks: 53, 54, 55
+    Indirect block: 56
+    Indirect data blocks: 57, 58, 59
+  File: final_fragmented_file
+    Size: 134
+    Inode: 8
+    Direct blocks: 64, 65, 66
+    Indirect block: 67
+    Indirect data blocks: 68, 69, 70, 71, 72, 73

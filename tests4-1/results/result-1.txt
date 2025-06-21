@@ -1,0 +1,13 @@
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 15/16
+   Available Blocks: 202/208
+Detailed File Information:
+  File: test_file_1
+    Size: 79
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5

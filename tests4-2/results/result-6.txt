@@ -1,0 +1,175 @@
+CMD : READ file_1
+Inode [00]: file_1 (file size : 24 B)
+Block [00] Direct: Small content fo
+Block [01] Direct: r file 1
+File Contents: Small content for file 1
+
+CMD : READ file_2
+Inode [01]: file_2 (file size : 24 B)
+Block [02] Direct: Small content fo
+Block [03] Direct: r file 2
+File Contents: Small content for file 2
+
+CMD : READ file_3
+Inode [02]: file_3 (file size : 24 B)
+Block [04] Direct: Small content fo
+Block [05] Direct: r file 3
+File Contents: Small content for file 3
+
+CMD : READ file_4
+Inode [03]: file_4 (file size : 24 B)
+Block [06] Direct: Small content fo
+Block [07] Direct: r file 4
+File Contents: Small content for file 4
+
+CMD : READ file_5
+Inode [04]: file_5 (file size : 24 B)
+Block [08] Direct: Small content fo
+Block [09] Direct: r file 5
+File Contents: Small content for file 5
+
+CMD : READ file_6
+Inode [05]: file_6 (file size : 24 B)
+Block [10] Direct: Small content fo
+Block [11] Direct: r file 6
+File Contents: Small content for file 6
+
+CMD : READ file_7
+Inode [06]: file_7 (file size : 24 B)
+Block [12] Direct: Small content fo
+Block [13] Direct: r file 7
+File Contents: Small content for file 7
+
+CMD : READ file_8
+Inode [07]: file_8 (file size : 24 B)
+Block [14] Direct: Small content fo
+Block [15] Direct: r file 8
+File Contents: Small content for file 8
+
+CMD : READ file_9
+Inode [08]: file_9 (file size : 24 B)
+Block [16] Direct: Small content fo
+Block [17] Direct: r file 9
+File Contents: Small content for file 9
+
+CMD : READ file_10
+Inode [09]: file_10 (file size : 25 B)
+Block [18] Direct: Small content fo
+Block [19] Direct: r file 10
+File Contents: Small content for file 10
+
+CMD : READ file_11
+Inode [10]: file_11 (file size : 25 B)
+Block [20] Direct: Small content fo
+Block [21] Direct: r file 11
+File Contents: Small content for file 11
+
+CMD : READ file_12
+Inode [11]: file_12 (file size : 25 B)
+Block [22] Direct: Small content fo
+Block [23] Direct: r file 12
+File Contents: Small content for file 12
+
+CMD : READ file_13
+Inode [12]: file_13 (file size : 25 B)
+Block [24] Direct: Small content fo
+Block [25] Direct: r file 13
+File Contents: Small content for file 13
+
+CMD : READ file_14
+Inode [13]: file_14 (file size : 25 B)
+Block [26] Direct: Small content fo
+Block [27] Direct: r file 14
+File Contents: Small content for file 14
+
+CMD : READ file_15
+Inode [14]: file_15 (file size : 25 B)
+Block [28] Direct: Small content fo
+Block [29] Direct: r file 15
+File Contents: Small content for file 15
+
+CMD : READ quote_file
+Inode [15]: quote_file (file size : 104 B)
+Block [30] Direct: You must not let
+Block [31] Direct:  anyone define y
+Block [32] Direct: our limits becau
+Block [33] Indirect Table: 34, 35, 36, 37
+Block [34] Indirect: se of where you 
+Block [35] Indirect: come from. Your 
+Block [36] Indirect: only limit is yo
+Block [37] Indirect: ur soul.
+File Contents: You must not let anyone define your limits because of where you come from. Your only limit is your soul.
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 0/16
+   Available Blocks: 170/208
+Detailed File Information:
+  File: file_1
+    Size: 24
+    Inode: 0
+    Direct blocks: 0, 1
+  File: file_2
+    Size: 24
+    Inode: 1
+    Direct blocks: 2, 3
+  File: file_3
+    Size: 24
+    Inode: 2
+    Direct blocks: 4, 5
+  File: file_4
+    Size: 24
+    Inode: 3
+    Direct blocks: 6, 7
+  File: file_5
+    Size: 24
+    Inode: 4
+    Direct blocks: 8, 9
+  File: file_6
+    Size: 24
+    Inode: 5
+    Direct blocks: 10, 11
+  File: file_7
+    Size: 24
+    Inode: 6
+    Direct blocks: 12, 13
+  File: file_8
+    Size: 24
+    Inode: 7
+    Direct blocks: 14, 15
+  File: file_9
+    Size: 24
+    Inode: 8
+    Direct blocks: 16, 17
+  File: file_10
+    Size: 25
+    Inode: 9
+    Direct blocks: 18, 19
+  File: file_11
+    Size: 25
+    Inode: 10
+    Direct blocks: 20, 21
+  File: file_12
+    Size: 25
+    Inode: 11
+    Direct blocks: 22, 23
+  File: file_13
+    Size: 25
+    Inode: 12
+    Direct blocks: 24, 25
+  File: file_14
+    Size: 25
+    Inode: 13
+    Direct blocks: 26, 27
+  File: file_15
+    Size: 25
+    Inode: 14
+    Direct blocks: 28, 29
+  File: quote_file
+    Size: 104
+    Inode: 15
+    Direct blocks: 30, 31, 32
+    Indirect block: 33
+    Indirect data blocks: 34, 35, 36, 37

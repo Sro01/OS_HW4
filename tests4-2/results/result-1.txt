@@ -1,0 +1,23 @@
+CMD : READ test_file_1
+Inode [00]: test_file_1 (file size : 79 B)
+Block [00] Direct: The problem is n
+Block [01] Direct: ot the problem. 
+Block [02] Direct: The problem is y
+Block [03] Indirect Table: 4, 5
+Block [04] Indirect: our attitude abo
+Block [05] Indirect: ut the problem.
+File Contents: The problem is not the problem. The problem is your attitude about the problem.
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 15/16
+   Available Blocks: 202/208
+Detailed File Information:
+  File: test_file_1
+    Size: 79
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5

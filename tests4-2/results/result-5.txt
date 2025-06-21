@@ -1,0 +1,116 @@
+CMD : READ huge_file_1
+Inode [00]: huge_file_1 (file size : 304 B)
+Block [00] Direct: ABCDEFGHIJKLMNOP
+Block [01] Direct: QRSTUVWXYZabcdef
+Block [02] Direct: ghijklmnopqrstuv
+Block [03] Indirect Table: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+Block [04] Indirect: wxyz0123456789AB
+Block [05] Indirect: CDEFGHIJKLMNOPQR
+Block [06] Indirect: STUVWXYZabcdefgh
+Block [07] Indirect: ijklmnopqrstuvwx
+Block [08] Indirect: yz0123456789ABCD
+Block [09] Indirect: EFGHIJKLMNOPQRST
+Block [10] Indirect: UVWXYZabcdefghij
+Block [11] Indirect: klmnopqrstuvwxyz
+Block [12] Indirect: 0123456789ABCDEF
+Block [13] Indirect: GHIJKLMNOPQRSTUV
+Block [14] Indirect: WXYZabcdefghijkl
+Block [15] Indirect: mnopqrstuvwxyz01
+Block [16] Indirect: 23456789ABCDEFGH
+Block [17] Indirect: IJKLMNOPQRSTUVWX
+Block [18] Indirect: YZabcdefghijklmn
+Block [19] Indirect: opqrstuvwxyz0123
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
+
+CMD : READ huge_file_2
+Inode [01]: huge_file_2 (file size : 304 B)
+Block [20] Direct: ABCDEFGHIJKLMNOP
+Block [21] Direct: QRSTUVWXYZabcdef
+Block [22] Direct: ghijklmnopqrstuv
+Block [23] Indirect Table: 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39
+Block [24] Indirect: wxyz0123456789AB
+Block [25] Indirect: CDEFGHIJKLMNOPQR
+Block [26] Indirect: STUVWXYZabcdefgh
+Block [27] Indirect: ijklmnopqrstuvwx
+Block [28] Indirect: yz0123456789ABCD
+Block [29] Indirect: EFGHIJKLMNOPQRST
+Block [30] Indirect: UVWXYZabcdefghij
+Block [31] Indirect: klmnopqrstuvwxyz
+Block [32] Indirect: 0123456789ABCDEF
+Block [33] Indirect: GHIJKLMNOPQRSTUV
+Block [34] Indirect: WXYZabcdefghijkl
+Block [35] Indirect: mnopqrstuvwxyz01
+Block [36] Indirect: 23456789ABCDEFGH
+Block [37] Indirect: IJKLMNOPQRSTUVWX
+Block [38] Indirect: YZabcdefghijklmn
+Block [39] Indirect: opqrstuvwxyz0123
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
+
+CMD : READ huge_file_3
+Inode [02]: huge_file_3 (file size : 304 B)
+Block [40] Direct: ABCDEFGHIJKLMNOP
+Block [41] Direct: QRSTUVWXYZabcdef
+Block [42] Direct: ghijklmnopqrstuv
+Block [43] Indirect Table: 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
+Block [44] Indirect: wxyz0123456789AB
+Block [45] Indirect: CDEFGHIJKLMNOPQR
+Block [46] Indirect: STUVWXYZabcdefgh
+Block [47] Indirect: ijklmnopqrstuvwx
+Block [48] Indirect: yz0123456789ABCD
+Block [49] Indirect: EFGHIJKLMNOPQRST
+Block [50] Indirect: UVWXYZabcdefghij
+Block [51] Indirect: klmnopqrstuvwxyz
+Block [52] Indirect: 0123456789ABCDEF
+Block [53] Indirect: GHIJKLMNOPQRSTUV
+Block [54] Indirect: WXYZabcdefghijkl
+Block [55] Indirect: mnopqrstuvwxyz01
+Block [56] Indirect: 23456789ABCDEFGH
+Block [57] Indirect: IJKLMNOPQRSTUVWX
+Block [58] Indirect: YZabcdefghijklmn
+Block [59] Indirect: opqrstuvwxyz0123
+File Contents: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
+
+CMD : READ quote_file
+Inode [03]: quote_file (file size : 123 B)
+Block [60] Direct: I have a crew th
+Block [61] Direct: at knows what ha
+Block [62] Direct: ppiness is. Huma
+Block [63] Indirect Table: 64, 65, 66, 67, 68
+Block [64] Indirect: n development ma
+Block [65] Indirect: y feel slow, but
+Block [66] Indirect:  something great
+Block [67] Indirect:  may emerge in t
+Block [68] Indirect: he process.
+File Contents: I have a crew that knows what happiness is. Human development may feel slow, but something great may emerge in the process.
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 12/16
+   Available Blocks: 139/208
+Detailed File Information:
+  File: huge_file_1
+    Size: 304
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+  File: huge_file_2
+    Size: 304
+    Inode: 1
+    Direct blocks: 20, 21, 22
+    Indirect block: 23
+    Indirect data blocks: 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39
+  File: huge_file_3
+    Size: 304
+    Inode: 2
+    Direct blocks: 40, 41, 42
+    Indirect block: 43
+    Indirect data blocks: 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
+  File: quote_file
+    Size: 123
+    Inode: 3
+    Direct blocks: 60, 61, 62
+    Indirect block: 63
+    Indirect data blocks: 64, 65, 66, 67, 68

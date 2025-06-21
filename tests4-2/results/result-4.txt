@@ -1,0 +1,45 @@
+CMD : READ large_file_1
+Inode [00]: large_file_1 (file size : 77 B)
+Block [00] Direct: Dobby is a free 
+Block [01] Direct: elf! And Dobby h
+Block [02] Direct: as come to save 
+Block [03] Indirect Table: 4, 5
+Block [04] Indirect: Harry Potter and
+Block [05] Indirect:  his friends!
+File Contents: Dobby is a free elf! And Dobby has come to save Harry Potter and his friends!
+
+CMD : READ large_file_2
+Inode [01]: large_file_2 (file size : 176 B)
+Block [06] Direct: I want to live! 
+Block [07] Direct: When do you thin
+Block [08] Direct: k people die? Wh
+Block [09] Indirect Table: 10, 11, 12, 13, 14, 15, 16, 17
+Block [10] Indirect: en they are shot
+Block [11] Indirect:  with a bullet? 
+Block [12] Indirect: No! When they ea
+Block [13] Indirect: t a soup made fr
+Block [14] Indirect: om a poisonous m
+Block [15] Indirect: ushroom? No! Peo
+Block [16] Indirect: ple die when the
+Block [17] Indirect: y are forgotten.
+File Contents: I want to live! When do you think people die? When they are shot with a bullet? No! When they eat a soup made from a poisonous mushroom? No! People die when they are forgotten.
+
+Filesystem Status:
+Superblock Information:
+   Filesystem Size: 4096 bytes
+   Block Size: 16 bytes
+   Available Inodes: 14/16
+   Available Blocks: 190/208
+Detailed File Information:
+  File: large_file_1
+    Size: 77
+    Inode: 0
+    Direct blocks: 0, 1, 2
+    Indirect block: 3
+    Indirect data blocks: 4, 5
+  File: large_file_2
+    Size: 176
+    Inode: 1
+    Direct blocks: 6, 7, 8
+    Indirect block: 9
+    Indirect data blocks: 10, 11, 12, 13, 14, 15, 16, 17
