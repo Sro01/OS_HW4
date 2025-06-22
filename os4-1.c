@@ -11,8 +11,6 @@
 #define MAX_FILE_BLOCKS 3
 #define NONE_BLOCK 255
 
-// #define SUPERBLOCK_SIZE 256
-
 typedef struct {
     /* 모든 바이너리 파일에서 동일하게 주어짐 */
     int fs_size;                         // 파일 시스템 전체 크기 (4B)
@@ -43,16 +41,6 @@ typedef struct {
     Inode inodes[MAX_FILES];        // 32B * 16 = 512B
     DataBlock blocks[MAX_BLOCKS];    // 16B * 208 = 3328B
 } FileSystem;                       // 총 4096B
-
-/*
-    // if ((Inode.size / 48) > 0) {
-        // Indirect Block 할당
-        Datablock datablocks;
-        indirect_blocks = datablocks;
-        // indirect block table이 가리키는 파일 16개 * 16byte
-    }
-
-*/
 
 FileSystem fs;
 
