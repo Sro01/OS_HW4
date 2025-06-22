@@ -50,9 +50,14 @@ int calculate_indirect_blocks(int size) {
         return 0;
     }
 
+    /* 
+        파일 크기에서 direct block (48B)만큼 빼고
+        그 값에서 Block 크기만큼 나누면 indirect_blocks의 개수
+    */
+
     int ret = (size - 48) / 16;
 
-    if ((size - 48) % 16 > 0) { 
+    if ((size - 48) % 16 > 0) {  // 나머지가 있으면 개수 + 1
         return ++(ret);
     } else {
         return ret;
@@ -83,6 +88,8 @@ void print_file_info() {
         printf("\t\tSize: %u\n", inode.size);
         printf("\t\tInode: %d\n", i);
         printf("\t\tDirect blocks: ");
+
+        /* NONE_BLOCK(255) 개수 계산하여 유효한 블록만 출력 */
         int none_blocks = 0;
         for (int i = 0; i < MAX_FILE_BLOCKS; i++) {
             if (inode.blocks[i] == NONE_BLOCK) {
@@ -90,8 +97,9 @@ void print_file_info() {
             }
         }
 
+        /* Direct Blocks 출력 */
         for (int j = 0; j < MAX_FILE_BLOCKS; j++) {
-            if (j == MAX_FILE_BLOCKS - none_blocks - 1) {
+            if (j == MAX_FILE_BLOCKS - none_blocks - 1) { // 마지막 블록이면 줄바꿈
                 printf("%u\n", inode.blocks[j]);
                 break;
             }
@@ -100,19 +108,22 @@ void print_file_info() {
             }
         }
         
+        /* 파일 크기 기반으로 필요한 indirect block 개수 계산 */
         int indirect_blocks_num = calculate_indirect_blocks(inode.size);
+        if (indirect_blocks_num == -1) return;
 
         // Indirect block이 있는 경우에만 출력
         if (indirect_blocks_num > 0) {
             printf("\t\tIndirect block: %u\n", inode.indirect_blocks);
             printf("\t\tIndirect data blocks: ");
             
+            /* Indirect table에서 실제 데이터 블록들 번호 읽기 */
             int data_idx = inode.indirect_blocks;
-            
             unsigned char *indirect_data = (unsigned char *)fs.blocks[data_idx].data;
 
+            /* Indirect data block들의 번호 출력 */
             for (int j = 0; j < indirect_blocks_num; j++) {
-                if (j == indirect_blocks_num - 1) {
+                if (j == indirect_blocks_num - 1) { // 마지막 블록이면 줄바꿈
                     printf("%u\n", indirect_data[j]);
                 }
                 else {
@@ -124,6 +135,7 @@ void print_file_info() {
 }
 
 int get_inode_idx(char *cmd_file_name) {
+    /* 명령어의 파일 이름과 일치하는 파일 이름을 가진 inode의 번호를 return*/
     for (int i = 0; i < MAX_FILES; i++) {
         Inode inode = fs.inodes[i];
         if (fs.superblock.inode_alloc_bitmap[i] && 
@@ -138,13 +150,8 @@ int get_inode_idx(char *cmd_file_name) {
 void print_read_command(char *cmd_file_name) {
     printf("CMD : READ %s\n", cmd_file_name);
     
-    int inode_idx = get_inode_idx(cmd_file_name);
+    int inode_idx = get_inode_idx(cmd_file_name); // 명령어에 해당하는 파일 이름을 가진 inode의 번호
     Inode inode = fs.inodes[inode_idx];
-
-    /* 총 블럭 개수 */
-    int total_block = MAX_FILE_BLOCKS;
-    int indirect_blocks_num = calculate_indirect_blocks(inode.size);
-    total_block += indirect_blocks_num;
     
     char *file_contents[MAX_BLOCKS];
     int fc_idx = 0;
@@ -156,15 +163,16 @@ void print_read_command(char *cmd_file_name) {
         int directblock_idx = inode.blocks[i];
         DataBlock datablock = fs.blocks[directblock_idx];
         
-        if (directblock_idx != NONE_BLOCK) {
+        if (directblock_idx != NONE_BLOCK) { // NONE_BLOCK (ff)은 예외 처리
             printf("Block [%02d] Direct: %.*s\n", directblock_idx, BLOCK_SIZE, datablock.data);
             file_contents[fc_idx++] = fs.blocks[directblock_idx].data;
-        } else {
-            total_block--;
         }
     }
     
     /* Indirect Block */
+    int indirect_blocks_num = calculate_indirect_blocks(inode.size);
+    if (indirect_blocks_num == -1) return;
+
     if (indirect_blocks_num > 0) {
         int data_idx = inode.indirect_blocks;
         printf("Block [%02d] Indirect Table: ", data_idx);
@@ -189,11 +197,12 @@ void print_read_command(char *cmd_file_name) {
 
     /* File Contents */
     printf("File Contents: ");
+    
+    // inode의 파일 크기만큼 출력해야 함
     int remaining_size = inode.size;
 
     for (int i = 0; i < fc_idx && remaining_size > 0; i++) {
         int print_size = (remaining_size >= BLOCK_SIZE) ? BLOCK_SIZE : remaining_size;
-
         printf("%.*s", print_size, file_contents[i]);
         remaining_size -= print_size;
     }
@@ -204,9 +213,7 @@ void read_binary() {
     FILE *fp = stdin;
 
     /* 1. Super Block - 256B */
-    if (fread(&(fs.superblock), sizeof(fs.superblock), 1, fp)) {
-        
-    } else {
+    if (!fread(&(fs.superblock), sizeof(fs.superblock), 1, fp)) {
         // printf("ERROR!\n");
         exit(1);
     }
@@ -226,7 +233,6 @@ void read_binary() {
             exit(1);
         }
     }
-    
 
     /* 4. Command 처리 */
     unsigned char cmd;
@@ -250,10 +256,15 @@ void read_binary() {
             break;
         }
     }
-    print_superblock_info();
-    print_file_info();
 }
 
 int main() {
+    /* .bin 파일 읽어오기 */
     read_binary();
+
+    /* 결과 출력 */
+    print_superblock_info();
+    print_file_info();
+
+    return 0;
 }
