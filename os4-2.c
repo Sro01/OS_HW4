@@ -158,7 +158,7 @@ void print_read_command(char *cmd_file_name) {
         
         if (directblock_idx != NONE_BLOCK) {
             printf("Block [%02d] Direct: %.*s\n", directblock_idx, BLOCK_SIZE, datablock.data);
-            file_contents[fc_idx++] = datablock.data;
+            file_contents[fc_idx++] = fs.blocks[directblock_idx].data;
         } else {
             total_block--;
         }
@@ -183,15 +183,19 @@ void print_read_command(char *cmd_file_name) {
         for (int i = 0; i < indirect_blocks_num; i++) {
             DataBlock datablock = fs.blocks[indirect_data[i]];
             printf("Block [%02d] Indirect: %.*s\n", indirect_data[i], BLOCK_SIZE, datablock.data);
-            file_contents[fc_idx++] = datablock.data;
+            file_contents[fc_idx++] = fs.blocks[indirect_data[i]].data;
         }
     }
 
     /* File Contents */
     printf("File Contents: ");
+    int remaining_size = inode.size;
 
-    for (int i = 0; i < total_block; i++) {
-        printf("%.*s", total_block * BLOCK_SIZE, file_contents[i]);
+    for (int i = 0; i < fc_idx && remaining_size > 0; i++) {
+        int print_size = (remaining_size >= BLOCK_SIZE) ? BLOCK_SIZE : remaining_size;
+
+        printf("%.*s", print_size, file_contents[i]);
+        remaining_size -= print_size;
     }
     printf("\n\n");
 }
